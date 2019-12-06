@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->take( 7 )->get();
+        $articles = Article::orderBy('created_at', 'desc')->take(7)->get();
         $user = Auth::user();
         return view('home', [
             'user_name' => $user->name,
